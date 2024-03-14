@@ -16,7 +16,7 @@ body {
     width: 100vw;
     height: 100vh;
     font-size: large;
-    ;
+    
 }
 
 a {
@@ -32,13 +32,13 @@ ul {
 }
 
 /* purple border for building layout */
-.wrapper > *, .sidebar >* {
+.wrapper > * {
     border: 1px solid purple;
 }
 
 .wrapper {
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: .5fr 3fr;
     grid-template-rows: 1fr 5fr;
     height: 100%;
     width: 100%;
@@ -53,18 +53,48 @@ ul {
     align-items: center;
     justify-content: center;
     gap:10px;
-    padding: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
+   
     background-color: var(--green400);
     color: whitesmoke;
      
 }
+
+.sidebar .logo {
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    justify-items: start;
+    align-items: start;
+    
+}
+
+.sidebar .logo::after {
+    position: absolute;
+    content: url('resources/img/gamepad-square-outline.svg');
+    width: 2rem;
+    height: 2rem;
+    right: 10px;
+    top: -1px;
+    
+}
+
+.logo > * {
+    margin: 0;
+    padding: 0;
+}
+
+
 .nav {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     gap:12px;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: bold;
+    
     
 }
 
@@ -79,7 +109,7 @@ ul {
     content: "";
     width: 1.3rem;
     height: 1.3rem;
-    left: -25px;
+    left: -32px;
     top: 0px;
    
 }
@@ -127,6 +157,102 @@ ul {
 }
 
 .main {
+    grid-column: 2/3;
+    grid-row: 2/3;
+
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+    grid-template-rows: 0.1fr 1fr 1fr;
+
+    
+    gap: 10px;
+    margin-left: 10px;
+    padding:5px;
+
+
+}
+
+#project-head {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    margin-top: 5px;
+    margin-bottom: 5px;
+   
+    
+}
+
+
+.projects {
+    display: grid;
+    grid-column: 1/2;
+    grid-row: 2/4;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+
+    gap:25px;
+    
+}
+
+.pCard {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1 fr;
+    padding: 15px;
+    gap:15px; 
+
+    background-color: white;
+    box-shadow: 10px 10px 2px 0px rgba(34, 197, 94, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.089);
+    border-radius: 10px;
+}
+
+.cardActions > * {
+    width: 1.3rem;
+    height: 1.3rem;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.favorite {
+    content: url('resources/img/heart-plus-outline.svg');
+}
+
+.watching {
+    content: url('resources/img/eye-plus-outline.svg');
+}
+
+.share {
+    content: url('resources/img/export-variant.svg');
+}
+
+.text {
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: 1fr;
+   
+   align-items: start;
+   justify-items: start;
+
+}
+
+.cardActions {
+    justify-self: end;
+    
+}
+
+.text > * {
+    margin: 0;
+}
+
+
+
+.announcements {
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+.trending {
     grid-column: 2/3;
     grid-row: 2/3;
 }
