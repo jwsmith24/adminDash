@@ -1,4 +1,5 @@
 :root{
+    /* Layout color suite */
     --green100: #dcfce7;
     --green200: #bbf7d0;
     --green300: #86efac;
@@ -15,8 +16,15 @@ body {
     width: 100vw;
     height: 100vh;
     font-size: large;
+    ;
 }
 
+a {
+    /* Make links blend in for nav items*/
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
 
 
 ul {
@@ -46,18 +54,72 @@ ul {
     justify-content: center;
     gap:10px;
     padding: 10px;
-    background-color: var(--green500);
+    background-color: var(--green400);
     color: whitesmoke;
      
 }
-.sidebar ul {
+.nav {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
-    gap:10px;
+    gap:12px;
     font-size: 1.2rem;
     font-weight: bold;
+    
 }
+
+.nav li {
+    position: relative;
+}
+
+
+
+.nav li::before {
+    position: absolute;
+    content: "";
+    width: 1.3rem;
+    height: 1.3rem;
+    left: -25px;
+    top: 0px;
+   
+}
+
+#home::before {
+    content: url('resources/img/home-circle.svg');
+}
+
+#profile::before {
+    content: url('resources/img/account.svg');
+}
+
+#msg::before {
+    content: url('resources/img/message-processing-outline.svg');
+}
+
+#history::before {
+    content:url('resources/img/history.svg')
+}
+
+#tasks::before {
+    content: url('resources/img/file-tree.svg');
+}
+
+#communities::before {
+    content: url('resources/img/account-group.svg');
+}
+
+#settings::before {
+    content: url('resources/img/cogs.svg');
+}
+
+#support::before {
+    content: url('resources/img/lifebuoy.svg');
+}
+
+#privacy::before {
+    content:url('resources/img/security.svg');
+}
+
 
 .header {
     grid-column: 2/3;
