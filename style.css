@@ -443,7 +443,7 @@ button:hover{
 
     content: "";
 
-    background-image: url("/resources/img/icons8-hammerhead-64.png");
+    background-image: url("/resources/img/icons8-hammerhead-64.png z");
     background-size: cover;
     width: 30px;
     height: 30px;
